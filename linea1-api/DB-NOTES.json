@@ -1,0 +1,66 @@
+{
+
+  // Tablas que se modificaron
+  "tablas_que_se_agregaron_columnas": {
+    "sarcc_asociado_representante": {
+      "password" : "Varhar",
+      "token" : "Varchar (si tiene token indica que ha iniciado sesion)"
+    },
+    "sarcc_pv_plan" : {
+      "swis_id" : "INT (ID identificador unico de la tabla en SWIS original)"
+    },
+    "sarcc_pv_plan_report" : {
+      "swis_id" : "INT (ID identificador unico de la tabla en SWIS original)",
+      "route" : "TEXT"
+    },
+    "sarcc_pv_plan_telecom" : {
+      "swis_id" : "INT (ID identificador unico de la tabla en SWIS original)"
+    },
+    "sarcc_pv_plan_traveler" : {
+      "swis_id" : "INT (ID identificador unico de la tabla en SWIS original)"
+    },
+    "sarcc_pv_plan_vehicle" : {
+      "swis_id" : "INT (ID identificador unico de la tabla en SWIS original)"
+    }
+  },
+
+
+	"users": {
+		"state": {
+			"0": "Eliminado",
+			"1": "Habilitado",
+			"2": "Bloqueado"
+		}
+	},
+
+  "menu": {
+    "id_parent": "Id del principal de ser tipo menu y submenu",
+    "type": {
+      "1": "Menu: se puede modificar, y se muestra en el menu lateral",
+      "2": "Accion: no se puede modificar y son las acciones: editar, agregar, etc.."
+    },
+    "code": "Codigo unico no modificable para acceso on consultas acciones"
+  },
+
+  "propres": {
+    "?": "Presentaciones de productos"
+  },
+
+  "maintenances": {
+    "type": {
+      "?": "Tipo de mantenimiento",
+      "1": "Motor",
+      "2": "GAS"
+    }
+  },
+
+  "sos": {
+    "id_creator": "Id de la persona quien creo (representante)",
+    "state": {
+      "0": "Eliminado",
+      "1": "Nuevo generado",
+      "2": "Entregado, visto por el usuario"
+    }
+  }
+
+}

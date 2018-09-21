@@ -1,0 +1,26 @@
+<?php namespace Libs\Pixie;
+
+class Raw
+{
+    /* @var string */
+    protected $value;
+
+    /* @var array */
+    protected $bindings;
+
+    public function __construct($value, $bindings = array())
+    {
+        $this->value = (string)$value;
+        $this->bindings = (array)$bindings;
+    }
+
+    public function getBindings()
+    {
+        return $this->bindings;
+    }
+
+    public function __toString()
+    {
+        return (string)$this->value;
+    }
+}
