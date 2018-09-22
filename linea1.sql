@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-09-2018 a las 01:34:48
+-- Tiempo de generación: 22-09-2018 a las 06:33:31
 -- Versión del servidor: 10.1.34-MariaDB
 -- Versión de PHP: 7.2.8
 
@@ -26967,6 +26967,7 @@ CREATE TABLE `messages` (
   `id` int(11) NOT NULL,
   `parent_type` int(11) NOT NULL,
   `message` varchar(500) NOT NULL,
+  `select` varchar(400) DEFAULT NULL,
   `state` int(11) NOT NULL,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -26975,16 +26976,25 @@ CREATE TABLE `messages` (
 -- Volcado de datos para la tabla `messages`
 --
 
-INSERT INTO `messages` (`id`, `parent_type`, `message`, `state`, `date_created`) VALUES
-(1, 2, 'Para LÍNEA 1 tu seguridad es nuestra prioridad. En el andén, espera al tren detrás de la línea amarilla. Recuerda, contigo somos mejores.', 1, '2018-09-21 17:43:11'),
-(2, 2, 'Para LÍNEA 1 tu seguridad es nuestra prioridad. Si te encuentras al interior de los trenes, cede el asiento a las personas que lo necesitan. Recuerda, contigo somos mejores.', 1, '2018-09-21 17:45:47'),
-(3, 2, 'Para LÍNEA 1 tu seguridad es nuestra prioridad. El uso de los ascensores es exclusivo de las personas que lo necesitan. Recuerda, contigo somos mejores.', 1, '2018-09-21 17:45:47'),
-(4, 2, 'Para LÍNEA 1 tu seguridad es nuestra prioridad. En caso de emergencia, el tren es el lugar más seguro. Espera las indicaciones de nuestro personal capacitado. Recuerda, contigo somos mejores.', 1, '2018-09-21 17:45:47'),
-(5, 2, '\r\nPara LÍNEA 1 tu seguridad es nuestra prioridad. Mantén limpia las estaciones. Utiliza los tachos para echar la basura Recuerda, contigo somos mejores.', 1, '2018-09-21 17:45:47'),
-(6, 2, '\r\nPara LÍNEA 1 tu seguridad es nuestra prioridad. En el andén, espera al tren detrás de la línea amarilla. Recuerda, contigo somos mejores.', 1, '2018-09-21 17:45:47'),
-(7, 2, 'Para LÍNEA 1 tu seguridad es nuestra prioridad. Compra legal y recarga tu tarjeta con anticipación. Recuerda, contigo somos mejores.', 1, '2018-09-21 17:45:47'),
-(8, 2, 'Para LÍNEA 1 tu seguridad es nuestra prioridad. Cuando el tren se detenga, permite salir antes de ingresar. Recuerda, contigo somos mejores.', 1, '2018-09-21 17:45:47'),
-(9, 2, 'Para LÍNEA 1 tu seguridad es nuestra prioridad. En caso de algún problema, ubica el botón de emergencia que se encuentra en los trenes y andenes. Recuerda, contigo somos mejores.', 1, '2018-09-21 17:45:47');
+INSERT INTO `messages` (`id`, `parent_type`, `message`, `select`, `state`, `date_created`) VALUES
+(1, 2, 'Para LÍNEA 1 tu seguridad es nuestra prioridad. En el andén, espera al tren detrás de la línea amarilla. Recuerda, contigo somos mejores.', '', 1, '2018-09-22 03:42:27'),
+(2, 2, 'Para LÍNEA 1 tu seguridad es nuestra prioridad. Si te encuentras al interior de los trenes, cede el asiento a las personas que lo necesitan. Recuerda, contigo somos mejores.', '', 1, '2018-09-21 17:45:47'),
+(3, 2, 'Para LÍNEA 1 tu seguridad es nuestra prioridad. El uso de los ascensores es exclusivo de las personas que lo necesitan. Recuerda, contigo somos mejores.', '', 1, '2018-09-21 17:45:47'),
+(4, 2, 'Para LÍNEA 1 tu seguridad es nuestra prioridad. En caso de emergencia, el tren es el lugar más seguro. Espera las indicaciones de nuestro personal capacitado. Recuerda, contigo somos mejores.', '', 1, '2018-09-21 17:45:47'),
+(5, 2, '\r\nPara LÍNEA 1 tu seguridad es nuestra prioridad. Mantén limpia las estaciones. Utiliza los tachos para echar la basura Recuerda, contigo somos mejores.', '', 1, '2018-09-21 17:45:47'),
+(6, 2, '\r\nPara LÍNEA 1 tu seguridad es nuestra prioridad. En el andén, espera al tren detrás de la línea amarilla. Recuerda, contigo somos mejores.', '', 1, '2018-09-21 17:45:47'),
+(7, 2, 'Para LÍNEA 1 tu seguridad es nuestra prioridad. Compra legal y recarga tu tarjeta con anticipación. Recuerda, contigo somos mejores.', '', 1, '2018-09-21 17:45:47'),
+(8, 2, 'Para LÍNEA 1 tu seguridad es nuestra prioridad. Cuando el tren se detenga, permite salir antes de ingresar. Recuerda, contigo somos mejores.', '', 1, '2018-09-21 17:45:47'),
+(9, 2, 'Para LÍNEA 1 tu seguridad es nuestra prioridad. En caso de algún problema, ubica el botón de emergencia que se encuentra en los trenes y andenes. Recuerda, contigo somos mejores.', '', 1, '2018-09-21 17:45:47'),
+(10, 1, 'Estimado cliente, debido a problemas en nuestro sistema, venimos presentando demoras de XXXXXX en el servicio. Pedimos las disculpas del caso. Lo mantendremos informado.', '5 minutos, 10 minutos, 15 minutos, 20 minutos, Más de 20 minutos', 1, '2018-09-22 04:31:15'),
+(11, 1, 'Estimado cliente, un can ha ingresado a la vía. Venimos haciendo lo posible para rescatarlo. Es por eso que venimos presentando demoras en el servicio. Lo mantendremos informado.', NULL, 1, '2018-09-22 04:33:16'),
+(12, 1, 'Estimado cliente, un can ha ingresado a la vía. Venimos haciendo lo posible para rescatarlo. Es por eso que venimos presentando demoras en el servicio. Lo mantendremos informado.', NULL, 1, '2018-09-22 04:33:19'),
+(13, 1, 'Estimado cliente, un can ha ingresado a la vía. Venimos haciendo lo posible para rescatarlo. Es por eso que venimos presentando demoras en el servicio. Lo mantendremos informado.', NULL, 1, '2018-09-22 04:33:13'),
+(14, 1, 'Estimado cliente, un incendio se viene produciendo XXXXX de una de nuestras estaciones. Es por eso que venimos presentando demoras. Lo mantendremos informado sobre nuestra operación.', 'Dentro, Fuera', 1, '2018-09-22 04:31:35'),
+(15, 1, 'Estimado cliente, hace algunos instantes acaba de ocurrir un movimiento sísmico. Por su seguridad la operación se encuentra detenida. Si se presenta al interior de tren conserve la calma. Recuerde que el tren es el lugar más seguro. Lo mantendremos informado.', NULL, 1, '2018-09-22 04:33:08'),
+(16, 1, 'Estimado cliente, un objeto extraño ha sido encontrado en XXXXXXX. Es por eso que venimos presentando demoras. Lo mantendremos informado.', 'Un tren,En el andén,En la explanada de una de las estaciones,En los alrededores del sistema', 1, '2018-09-22 04:31:49'),
+(17, 1, 'Estimado cliente, hemos detectado la presencia de materiales peligrosos en nuestro sistema. Es por eso que venimos presentando demoras en nuestro servicio. Venimos trabajando arduamente para reestablecer a la brevedad la operación. Lo mantendremos informado.', NULL, 1, '2018-09-22 04:33:05'),
+(18, 1, 'Estimado cliente. El impasse ha sido solucionado. La operación se desarrolla de acuerdo a los horarios establecidos. Estamos para servirle. Para mayor información visite nuestra web: www.lineauno.pe', NULL, 1, '2018-09-22 04:30:49');
 
 -- --------------------------------------------------------
 
@@ -27255,7 +27265,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `id_role`, `name`, `surname`, `username`, `password`, `token`, `state`, `date_login`, `date_logout`, `date_created`, `date_updated`, `date_deleted`) VALUES
-(1, 1, 'Root', 'Suroot', 'root', 'fe01ce2a7fbac8fafaed7c982a04e229', '035fd8413270bbaf1723d829b5585a51', 1, '2018-09-21 17:18:37', '2018-09-17 14:08:54', '2018-03-26 00:11:24', '2018-09-21 17:18:37', '2018-08-29 10:37:14'),
+(1, 1, 'Root', 'Suroot', 'root', 'fe01ce2a7fbac8fafaed7c982a04e229', '035fd8413270bbaf1723d829b5585a51', 1, '2018-09-21 23:19:34', '2018-09-17 14:08:54', '2018-03-26 00:11:24', '2018-09-21 23:19:34', '2018-08-29 10:37:14'),
 (2, 0, 'acss', '', '', '', '', 1, NULL, NULL, '2018-08-24 14:18:42', NULL, NULL),
 (3, 0, 's', 'dsd', 'ccc', 'mil', '', 1, NULL, NULL, '2018-08-24 14:33:13', NULL, NULL),
 (4, 1, 'ok', '', 'milk', 'demo', '', 0, NULL, NULL, '2018-08-24 14:54:52', '2018-08-29 10:39:54', '2018-08-29 10:39:54'),
@@ -27391,7 +27401,7 @@ ALTER TABLE `events`
 -- AUTO_INCREMENT de la tabla `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `modules`

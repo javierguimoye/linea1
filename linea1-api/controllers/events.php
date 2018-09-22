@@ -100,7 +100,6 @@ class events extends _controller
     }
 
     public function dataForm($id = 0){
-
         $id = _REQ_INT('id');
         return rsp(true)
             //->set('item', $id > 0 ? Event::find($id) : null)
@@ -116,7 +115,7 @@ class events extends _controller
                                                 where e.id = '.$id.' ')->first() : null)
             ->set('type_notifications', Type_notification::all())
             ->set('stations', QB::query('SELECT id, name, district, address, lat, lng FROM stations')->get())
-            ->set('messages', QB::query('SELECT m.id, m.parent_type, tn.notificacion, m.message, m.state, m.date_created 
+            ->set('messages', QB::query('SELECT m.id, m.parent_type, tn.notificacion, m.select, m.message, m.state, m.date_created 
                                                 FROM messages m 
                                                 INNER JOIN 
                                                 type_notifications tn ON 
