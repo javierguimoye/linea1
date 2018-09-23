@@ -5,7 +5,7 @@ import {
 import Fils from "./widgets/fils";
 import EventosM from "./eventos_m";
 
-export default class Eventos extends React.Component {
+export default class Events extends React.Component {
 
     render() {
         return (
@@ -24,19 +24,22 @@ export default class Eventos extends React.Component {
                         <Fils {...this.props}
                               ref={ins => this.fils = ins}
                               endpoint={this.props.match.url}
+
                               cols={[
                                   {name: 'id', value: '#', width: '1%'},
-                                  {name: 'name', value: 'Titulo'},
-                                  {name: 'cost', value: 'Mensaje', width: '1%'},
-                                  {name: 'date_created', value: 'Fecha de creación', width: '1%'},
+                                  {name: 'direction', value: 'Estacion'},
+                                  {name: 'notificacion', value: 'Notificacion', width: '1%'},
+                                  {name: 'name', value: 'Mensaje'},
+                                  {name: 'date', value: 'Fecha', width: '1%'},
                                   {width: '1%'}
                               ]}
                               row={(o, i) => (
                                   <tr key={i}>
                                       <td>{o.id}</td>
+                                      <td>{o.direction}</td>
+                                      <td>{o.notificacion}</td>
                                       <td>{o.name}</td>
-                                      <td>{o.cost}</td>
-                                      <td className="nowrap">{o.date_created.datetime()}</td>
+                                      <td>{o.date}</td>
                                       <td>
                                           <Button color="primary" size="sm" onClick={() => this.modal.edit(o.id)}>
                                               <i className="fa fa-pencil"/>

@@ -47,8 +47,8 @@ class users extends _controller
     {
         $item = User::find($req->num('id'));
         $item->data('id_role', $req->num('id_role'));
-      //  $item->data('id_management', $req->num('id_management'));
-        $item->data('id_user', Auth::id());
+        //  $item->data('id_management', $req->num('id_management'));
+        //  $item->data('id_user', Auth::id());
         $item->data('name', $req->any('name'));
         $item->data('surname', $req->any('surname'));
         $item->data('username', $req->any('username'));

@@ -38,7 +38,7 @@ class events extends _controller
         $qb->orderBy($fils->sort_by, $fils->sort);
         $fils->set('total', $qb->count());
         $fils->set('pages', ceil($fils->total / $fils->max));
-        $fils->set('items',  QB::query('    SELECT e.id, e.id_station, e.direction, e.type, e.name, e.date, 
+        $fils->set('items',  QB::query('    SELECT e.id, e.id_station, e.direction, e.type, tn.notificacion, e.name, e.date, 
                                                 e.state, e.date_created, e.date_updated, e.date_deleted 
                                                 FROM events e 
                                                 INNER JOIN
