@@ -178,6 +178,7 @@ export default class EventosM extends Component {
     data.map(current => {
       stations.push({
         id: current.id,
+        value: current.id,
         label: current.name,
         address: current.address
       });
@@ -191,6 +192,7 @@ export default class EventosM extends Component {
     data.map(current => {
       allMessages.push({
         id: current.id,
+        value: current.id,
         label: current.message,
         message: current.message,
         notification: current.notificacion,
@@ -207,6 +209,7 @@ export default class EventosM extends Component {
     data.map(current => {
       messageTypes.push({
         id: current.id,
+        value: current.id,
         label: current.notificacion,
         notification: current.notificacion
       });
@@ -332,7 +335,6 @@ export default class EventosM extends Component {
         <Col md="12" className="text-center"> 
           {aux}
         </Col>
-        
       </Row>
     );
   };
