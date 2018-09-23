@@ -179,6 +179,7 @@ export default class EventosM extends Component {
       stations.push({
         id: current.id,
         value: current.id,
+        name: current.name,
         label: current.name,
         address: current.address
       });
@@ -248,7 +249,7 @@ export default class EventosM extends Component {
     let data = { 
       id_station: this.state.station.id,
       type: this.state.messageType.id,
-      direction: this.state.station.address,
+      direction: this.state.station.name,
       name: this.buildMessage(),
     };
     
