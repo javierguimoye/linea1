@@ -30,7 +30,7 @@ export default class Events extends React.Component {
                                   {name: 'direction', value: 'Estacion'},
                                   {name: 'notificacion', value: 'Notificacion', width: '1%'},
                                   {name: 'name', value: 'Mensaje'},
-                                  {name: 'date', value: 'Fecha', width: '1%'},
+                                  {name: 'date_created', value: 'Fecha', width: '1%'},
                                   {width: '1%'}
                               ]}
                               row={(o, i) => (
@@ -39,7 +39,7 @@ export default class Events extends React.Component {
                                       <td>{o.direction}</td>
                                       <td>{o.notificacion}</td>
                                       <td>{o.name}</td>
-                                      <td>{o.date}</td>
+                                      <td>{o.date_created}</td>
                                       <td>
                                           <Button color="primary" size="sm" onClick={() => this.modal.edit(o.id)}>
                                               <i className="fa fa-pencil"/>
