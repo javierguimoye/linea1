@@ -116,7 +116,7 @@ box-shadow:1px 1px 0 rgba(0,0,0,.1)}
 }
 
 .messages-box {
-  max-height: 220px;
+  max-height: 180px;
   overflow-y: scroll;
   border: 1px solid lightgray;
   border-radius: 5px
@@ -160,6 +160,19 @@ button {
   }
 }
 
+.preview {
+  p {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: whitesmoke;
+    span {
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+}
 /* OVERRIDE */
 .app-header .navbar-brand { align-items:left!important; justify-content:left!important; width:auto }
 

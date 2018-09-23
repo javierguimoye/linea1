@@ -10115,7 +10115,7 @@ body {
     max-width: 900px; } }
 
 .messages-box {
-  max-height: 220px;
+  max-height: 180px;
   overflow-y: scroll;
   border: 1px solid lightgray;
   border-radius: 5px; }
@@ -10146,6 +10146,16 @@ button.active {
   background-color: #b1e1e7; }
   button.active:hover {
     background-color: #b1e1e7; }
+
+.preview p {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: whitesmoke; }
+  .preview p span {
+    font-weight: 700;
+    font-size: 16px; }
 
 /* OVERRIDE */
 .app-header .navbar-brand {

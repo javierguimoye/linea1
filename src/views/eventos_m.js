@@ -227,6 +227,7 @@ export default class EventosM extends Component {
 
     this.setState({
       messageType: selectedOption,
+      message: {},
       messages
     });
   };
@@ -331,9 +332,28 @@ export default class EventosM extends Component {
         <Col md="12" className="text-center"> 
           {aux}
         </Col>
+        
       </Row>
     );
   };
+
+  renderPreview = () => {
+    let empty = Object.keys(this.state.message).length == 0;
+    let chunk = this.state.chunk;
+
+    return (
+      <Row className="form-group" style={{ display: empty ? "none" : "block" }}>
+        <Col md="12"> 
+          Preview <br />
+        </Col>
+        <Col 
+          md="12"
+          className="preview text-center"> 
+          <p dangerouslySetInnerHTML={{ __html: this.buildMessage().replace(chunk, `<span> ${chunk} </span>`) }}></p>
+        </Col>
+      </Row>
+    )
+  }
 
   render() {
     return (
@@ -382,8 +402,8 @@ export default class EventosM extends Component {
             </Row>
 
             { this.renderMessages() }
-
             { this.renderOptions() }
+            { this.renderPreview() }
 
           </ModalBody>
           <ModalFooter>
