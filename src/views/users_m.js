@@ -77,9 +77,9 @@ export default class UsersM extends Component {
             error: null
         });
 
+       
         Api.post('/users/create', this.state.item, (rsp) => {
-
-            if (rsp.ok) {
+           if (rsp.ok) {
                 toast.success('Guardado correctamente');
                 this.toggle();
                 if (typeof this.props.callback === 'function') this.props.callback();
@@ -92,6 +92,7 @@ export default class UsersM extends Component {
             }
 
         });
+    
     };
 
     remove = () => {

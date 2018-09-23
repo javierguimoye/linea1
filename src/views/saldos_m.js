@@ -85,14 +85,14 @@ export default class DocumentSigsM extends Component {
         formData.append('id', this.state.item.id);
       //  formData.append('name', this.state.item.name);
         formData.append('file', this.state.file);
-       // console.log(formData);
+       
         /*const config = {
             headers: {
                 'content-type': 'multipart/form-data'
             }
         }
         return  post(url, formData,config);*/
-
+ console.log(formData);
         Api.post('/saldos/create', formData, (rsp) => {
 
             if (rsp.ok) {

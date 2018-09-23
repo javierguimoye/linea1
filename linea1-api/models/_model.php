@@ -202,7 +202,7 @@ abstract class _model
     {
         if ($this->exist()) {
             if ($this->update()) {
-                Log::add(Log::UPDATE, Auth::id(), $this->getID(), $this->table);
+               // Log::add(Log::UPDATE, Auth::id(), $this->getID(), $this->table);
                 return rsp(true)->set('id', $this->getID());
             } else {
                 return rsp('Error interno :: DB :: insert');
@@ -212,7 +212,7 @@ abstract class _model
                 $this->data(static::STATE, static::_STATE_ENABLED);
             }
             if ($this->create()) {
-                Log::add(Log::CREATE, Auth::id(), $this->getID(), $this->table);
+              //  Log::add(Log::CREATE, Auth::id(), $this->getID(), $this->table);
                 return rsp(true)->set('id', $this->getID());
             } else {
                 return rsp('Error interno :: DB :: insert');

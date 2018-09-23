@@ -15,7 +15,7 @@ import Materials from "./views/materials";
 import DocumentSigs_horario from "./views/horarios";
 import DocumentSigs_saldos from "./views/saldos";
 import Personals from "./views/personals";
-import Eventos from "./views/eventos";
+import Events from "./views/events";
 import Kits from "./views/kits";
 import Roles from "./views/roles";
 import Settings from "./views/settings";
@@ -49,7 +49,7 @@ const routes = [
     {path: '/horarios', component: DocumentSigs_horario},
     {path: '/saldos', component: DocumentSigs_saldos},
     {path: '/personals', component: Personals},
-    {path: '/eventos', component: Eventos},
+    {path: '/events', component: Events},
     {path: '/kits', component: Kits},
     {path: '/modules', component: Modules},
     {path: '/roles', component: Roles},

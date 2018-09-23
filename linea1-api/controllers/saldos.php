@@ -62,11 +62,9 @@ class saldos extends _controller
        // if (empty($item->name)) {
       //      return rsp('Ingresa un nombre');
       //  } else {
-            $r = $item->createOrUpdateRSP();
+        $r = $item->createOrUpdateRSP();
         $pic=null;
             if ($r->ok) {
-                var_dump($item);
-                exit;
                 $file = @$_FILES['file'];
                 if (isset($file['tmp_name']) && !empty($file['tmp_name'])) {
                     $pic = 'document_sig_' . $r->id . '.' . pathinfo($file['name'], PATHINFO_EXTENSION);
@@ -153,7 +151,7 @@ class saldos extends _controller
 
     public function remove(Req $req)
     {
-        return Horario::deleteRSP($req->num('id'));
+        return Saldo::deleteRSP($req->num('id'));
     }
 
 }

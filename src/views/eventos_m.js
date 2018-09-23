@@ -46,20 +46,7 @@ export default class EventosM extends Component {
       modal: !this.state.modal
     });
   };
-  /*
-    add = () => {
-        this.setState({
-            ...this.state,
-            loading: false,
-            modal: true,
-            item: {
-                id: 0,
-                name: '',
-                cost: ''
-            }
-        });
-    };
-*/
+
   add = () => {
     this.dataForm(0);
   };
@@ -102,11 +89,11 @@ export default class EventosM extends Component {
         );
 
         this.mapDataToState(rsp);
-
         this.setState({
           loading: false,
           modal: true
         });
+
       } else {
         this.setState({
           ...this.state,
