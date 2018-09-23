@@ -115,17 +115,50 @@ box-shadow:1px 1px 0 rgba(0,0,0,.1)}
   .card.maxi{ max-width:900px }
 }
 
+.messages-box {
+  max-height: 220px;
+  overflow-y: scroll;
+  border: 1px solid lightgray;
+  border-radius: 5px
+}
 
+p {
+  &.list {
+    padding: 10px;
+    margin: 0px;
+    border-bottom: 1px solid darkgrey;
+    cursor: pointer;
+    &:hover {
+      background-color: #ebf7f9;
+    }
+  }
+  &.active {
+    cursor: default;
+    background-color: #b1e1e7;
+    &:hover {
+      background-color: #b1e1e7;
+    }
+  }
+}
 
+button {
+  &.btn-select {
+    min-width: 125px;
+    margin: 5px;
+    height: 40px;
+    &:hover {
+      background-color: #ebf7f9;
+    }
+  }
 
-
-
-
-
-
-
-
-
+  &.active {
+    cursor: default;
+    background-color: #b1e1e7;
+    &:hover {
+      background-color: #b1e1e7;
+    }
+  }
+}
 
 /* OVERRIDE */
 .app-header .navbar-brand { align-items:left!important; justify-content:left!important; width:auto }

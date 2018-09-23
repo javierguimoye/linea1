@@ -6,7 +6,7 @@ export class Api {
 
     static URL_BASE = process.env.NODE_ENV === 'production'
         ? 'http://beta.focusit.pe/linea-1/api'
-        : 'http://localhost/linea1-api';
+        : 'http://67be3659.ngrok.io/linea1-api';
       
     static get(url, data, callback, loading, cache) {
 
